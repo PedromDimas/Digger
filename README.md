@@ -26,4 +26,24 @@
     [PRD]
     
     ```
-- You can specify multiple servers and service ports per enviroment and can also specify more 
+- You can specify multiple servers and service ports per enviroment and can also specify more
+
+### App
+- This is a simple cli app with only one command.
+- After configuring the `digger.cfg` file, run the app with 
+    ```shell
+    python main.py
+     ```
+- Inside the app there are only 2 commands
+    - `exit` which exits the application and closes all open connections
+    - `connect` which connects a new tunnel
+        - Args of connect:
+        1. `lp` : local port on machine to map
+        2. `env`: the enviroment defined in the cfg
+        3. `addr`: the name of the addres specified in the cfg
+        4. `svc`: the name of the service specified in the cfg
+        - Example:
+        ```
+        connect lp=8080 env=DEVOPS addr=ServerAddress svc=Jenkins
+        ```
+         
