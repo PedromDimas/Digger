@@ -1,5 +1,12 @@
 # Digger
 
+## Prep:
+- Install the following packages if needed:
+    ```sh
+    pip install configparser
+    pip install multiprocessing
+    ```
+
 ## Usage
 
 ### Config file
@@ -46,4 +53,3 @@
         ```
         connect lp=8080 env=DEVOPS addr=ServerAddress svc=Jenkins
         ```
-         
