@@ -47,9 +47,11 @@ if __name__ == '__main__':
         else:
             if inn == "help":
                 help()
-            if inn == "connect":
-                parsed = parse_input(inn)
+            if inn.split(' ')[0] == "connect":
+                parsed = parse_input(inn.split(' ',1)[1])
                 print(parsed)
                 p = Process(target=tunnel, args=[config,parsed])
                 p.start()
                 tunnels.append(p)
+            else:
+                print('Invalid Command')
